@@ -34,13 +34,13 @@ This project provides a web-based interface for teachers to submit and grade stu
     python main.py
     ```
 
-2. Access the application in your web browser at localhost:
+2. Local Access: To view the application on your local machine, open your web browser and visit:
 
    ```bash
    http://localhost:5000
    ```
-<center>or</center></br>
-3. Access the Render server URL: 
+   or</br>
+3. Render Server Access: To access the application deployed on Render, use the following URL:
 
 ```bash
 https://flask-app-7ar8.onrender.com
