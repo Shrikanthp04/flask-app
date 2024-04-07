@@ -42,9 +42,9 @@ This project provides a web-based interface for teachers to submit and grade stu
    or</br>
 3. Render Server Access: To access the application deployed on Render, use the following URL:
 
-```bash
-https://flask-app-7ar8.onrender.com
-```
+   ```bash
+   https://flask-app-7ar8.onrender.com
+   ```
 
 5. Enter the marks for each subject in the provided form and submit.
 
