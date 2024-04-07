@@ -34,8 +34,8 @@ This project provides a web-based interface for teachers to submit and grade stu
     python main.py
     ```
 
-2. Access the application in your web browser at localhost: `http://localhost:5000`.
-                                or
+2. Access the application in your web browser at localhost: `http://localhost:5000`.</br>
+                                or</br>
 Access the Render server URL: `https://flask-app-7ar8.onrender.com`.
 
 3. Enter the marks for each subject in the provided form and submit.
