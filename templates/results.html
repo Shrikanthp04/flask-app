@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Result Page</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/results.css')}}">
+</head>
+
+<body>
+    <div class="container">
+        <h1 style="text-align: center;">Results</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th>Subjects</th>
+                    <th>MAX Marks</th>
+                    <th>MIN Marks</th>
+                    <th>Obtained Marks</th>
+                    <th>Result</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% set score = namespace(value=0) %}
+                {% for sub, marks in res.items() %}
+                <tr>
+                    <td>{{ sub }}</td>
+                    <td>{% if sub == 'First Language' %}125{% else %}100{% endif %}</td>
+                    <td>{% if sub == 'First Language' %}44{% else %}35{% endif %}</td>
+                    <td>{{ marks }}</td>
+                    <td
+                        class="{% if sub == 'First Language' and marks >= 44 or sub != 'First Language' and marks >= 35 %}pass{% else %}fail{% endif %}">
+                        {% if sub == 'First Language' %}
+                        {% if marks >= 44 %}
+                        PASS
+                        {% set score.value = score.value + 1 %}
+                        {% else %}
+                        FAIL
+                        {% endif %}
+                        {% elif marks >= 35 %}
+                        PASS
+                        {% set score.value = score.value + 1 %}
+                        {% else %}
+                        FAIL
+                        {% endif %}
+                    </td>
+                </tr>
+                {% endfor %}
+                <tr>
+                    <td>Total</td>
+                    <td>625</td>
+                    <td>219</td>
+                    <td>{{ total_marks }}</td>
+                    <td>-</td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="result-message">
+            {% if score.value == 6 %}
+            <h2>Percentage of {{ percentage }}%</h2>
+            <h1 style="color: blue;">PASSED !!!</h1>
+            {% else %}
+            <h1 style="color: red;">FAILED !!!</h1>
+            {% endif %}
+        </div>
+    </div>
+</body>
+
+</html>

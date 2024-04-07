@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grade Submission Form</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <script type="text/javascript" src="{{ url_for('static', filename='script/script.js')}}"></script>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Grade Submission Form</h1>
+        <form action="/submit" method="post" onsubmit="return validateForm()">
+            <label for="First Language">First Language:</label>
+            <input type="number" id="First Language" name="First Language" min="0" max="125" required>
+            <label for="Second Language">Second Language:</label>
+            <input type="number" id="Second Language" name="Second Language" min="0" max="100" required>
+            <label for="Third Language">Third Language:</label>
+            <input type="number" id="Third Language" name="Third Language" min="0" max="100" required>
+            <label for="Mathematics">Math:</label>
+            <input type="number" id="Mathematics" name="Mathematics" min="0" max="100" required>
+            <label for="Science">Science:</label>
+            <input type="number" id="Science" name="Science" min="0" max="100" required>
+            <label for="Social">Social:</label>
+            <input type="number" id="Social" name="Social" min="0" max="100" required>
+            <div id="error-message" class="error" style="display: none;">Please ensure all fields are filled correctly.
+            </div>
+            <input type="submit" value="Submit">
+        </form>
+</body>
+
+</html>
