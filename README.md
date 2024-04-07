@@ -1,6 +1,6 @@
 # Grade Submission System
 
-A simple Flask application for submitting and grading student marks is deployed on a Heroku server.
+A simple Flask application for submitting and grading student marks is deployed on a Render server.
 ## Table of Contents
 
 - [Introduction](#introduction)
@@ -35,12 +35,16 @@ This project provides a web-based interface for teachers to submit and grade stu
     ```
 
 2. Access the application in your web browser at localhost:
+
    ```bash
    http://localhost:5000
    ```
-                           <center>or</center></br>
-Access the Render server URL: ```bash
-https://flask-app-7ar8.onrender.com```
+<center>or</center></br>
+3. Access the Render server URL: 
+
+```bash
+https://flask-app-7ar8.onrender.com
+```
 
 5. Enter the marks for each subject in the provided form and submit.
 
