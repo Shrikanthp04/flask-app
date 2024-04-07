@@ -17,7 +17,7 @@ This project provides a web-based interface for teachers to submit and grade stu
 
     ```bash
     git clone https://github.com/Shrikanthp04/Flask.git
-    cd flask-app/api
+    cd flask-app
     ```
 
 2. Install dependencies:
